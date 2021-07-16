@@ -47,7 +47,6 @@ const Search = () => {
         e.preventDefault();
         if (searchInput === "" && categorySelect === "all") {
             setTooltipVisible(true);
-            console.log("ssss", tooltipVisible);
         } else {
             const newQuery = true;
             dispatch(setLoading(true));
@@ -61,6 +60,7 @@ const Search = () => {
                     newQuery,
                 ),
             );
+            setSearchInput("");
         }
     };
 
